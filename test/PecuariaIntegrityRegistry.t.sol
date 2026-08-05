@@ -31,17 +31,13 @@ contract PecuariaIntegrityRegistryTest is Test {
     function test_RevertsForDuplicateRecord() public {
         vm.startPrank(registrar);
         registry.register(RECORD_ID, PAYLOAD_HASH);
-        vm.expectRevert(
-            abi.encodeWithSelector(PecuariaIntegrityRegistry.RecordAlreadyRegistered.selector, RECORD_ID)
-        );
+        vm.expectRevert(abi.encodeWithSelector(PecuariaIntegrityRegistry.RecordAlreadyRegistered.selector, RECORD_ID));
         registry.register(RECORD_ID, PAYLOAD_HASH);
         vm.stopPrank();
     }
 
     function test_RevertsForUnauthorizedSender() public {
-        vm.expectRevert(
-            abi.encodeWithSelector(PecuariaIntegrityRegistry.Unauthorized.selector, unauthorized)
-        );
+        vm.expectRevert(abi.encodeWithSelector(PecuariaIntegrityRegistry.Unauthorized.selector, unauthorized));
         vm.prank(unauthorized);
         registry.register(RECORD_ID, PAYLOAD_HASH);
     }
