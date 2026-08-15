@@ -160,6 +160,7 @@ forge clean
 
 - [ ] Carregar `.env`: `set -o allexport; source .env; set +o allexport`
 - [ ] Rodar testes: `forge test -vvvv`
+- [ ] Formatar código: `forge fmt`
 - [ ] Compilar: `forge build`
 - [ ] Simular em testnet: `forge script script/Deploy.s.sol --rpc-url sepolia`
 - [ ] Verificar private key está em `~/.foundry/keystores/`
