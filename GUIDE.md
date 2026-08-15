@@ -79,7 +79,7 @@ forge script script/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --p
 
 ---
 
-## 4. Deploy em Testnets Reais
+## 4. Deploy em Testnets Reais (search for RPC endpoints in foundry.toml)
 
 ### Sepolia (Ethereum Testnet)
 ```bash
@@ -89,16 +89,6 @@ forge script script/Deploy.s.sol --rpc-url sepolia --broadcast --account minhaCa
 ### Optimism Sepolia
 ```bash
 forge script script/Deploy.s.sol --rpc-url optimism_sepolia --broadcast --account minhaCarteiraDeTeste -vvvv
-```
-
-### Arbitrum Sepolia
-```bash
-forge script script/Deploy.s.sol --rpc-url arbitrum_one_sepolia --broadcast --account minhaCarteiraDeTeste -vvvv
-```
-
-### Polygon Amoy
-```bash
-forge script script/Deploy.s.sol --rpc-url polygon_amoy --broadcast --account minhaCarteiraDeTeste -vvvv
 ```
 
 **Notas:**
